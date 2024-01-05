@@ -5,12 +5,22 @@ function checkPalindrome(str){
         return false;
     }
     str = str.toLowerCase();
+    let TransStr="";
+    for(i=0; i <str.length;i++){
+        if(str[i] === " "){
+
+        }
+        else{
+            TransStr += str[i]
+        }
+        console.log(TransStr)
+    }
     let revStr = ""
-    for(let i=str.length-1; i>=0; i--){
-        revStr += str[i];
+    for(let i=TransStr.length-1; i>=0; i--){
+        revStr += TransStr[i];
         
     }
-    if(str === revStr){
+    if(TransStr === revStr){
         return true;
     }
     else{
@@ -19,4 +29,4 @@ function checkPalindrome(str){
     // console.log(revStr)
 }
 
-console.log(checkPalindrome(''))
+console.log(checkPalindrome('hello olleh'))
